@@ -6,7 +6,6 @@
 
 (when (display-graphic-p) (toggle-scroll-bar -1)
                           (tool-bar-mode -1)
-                         ;(menu-bar-mode -1)
 			  (pixel-scroll-precision-mode 1))
 
 (setq inhibit-startup-message t)
@@ -17,4 +16,7 @@
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 
-(provide 'prf)
+(setenv "PATH" (concat (getenv "PATH") ":/usr/local/texlive/2024/bin/x86_64-linux"))
+(add-to-list 'exec-path "/usr/local/texlive/2024/bin/x86_64-linux")
+
+(provide '10-preferences)

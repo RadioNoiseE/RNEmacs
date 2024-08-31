@@ -5,4 +5,4 @@
   :magic ("%PDF" . pdf-view-mode)
   :config (pdf-tools-install :no-query))
 
-(provide 'pdf)
+(provide '90-pdfview)

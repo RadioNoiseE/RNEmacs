@@ -6,4 +6,4 @@
 	      ivy-count-format "(%d/%d) ")
   :config (ivy-mode 1))
 
-(provide 'lss)
+(provide '20-ivy)

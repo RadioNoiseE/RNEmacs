@@ -9,4 +9,4 @@
   :ensure t
   :after tree-sitter)
 
-(provide 'hli)
+(provide '20-treesitter)

@@ -6,4 +6,4 @@
 (unless (bound-and-true-p package--initialized)
         (package-initialize))
 
-(provide 'mlp)
+(provide '0-melpa)

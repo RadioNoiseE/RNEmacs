@@ -2,4 +2,4 @@
 
 (load-library "cweb-mode")
 
-(provide 'web)
+(provide '50-literate)

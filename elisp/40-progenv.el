@@ -14,4 +14,4 @@
   :init (setq proof-splash-enable nil
 	      proof-delete-empty-windows t))
 
-(provide 'ple)
+(provide '40-progenv)

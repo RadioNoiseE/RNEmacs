@@ -14,4 +14,4 @@
       (set-window-fringes (minimap-get-window) 1 1 nil)))
   :config (advice-add #'minimap-new-minimap :after #'minimap--customize))
 
-(provide 'pvw)
+(provide '20-minimap)

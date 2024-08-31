@@ -9,4 +9,4 @@
 
 (setq use-package-always-ensure t)
 
-(provide 'pkg)
+(provide '0-package)

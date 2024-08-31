@@ -4,4 +4,4 @@
   :ensure t
   :defer t)
 
-(provide 'git)
+(provide '60-git)

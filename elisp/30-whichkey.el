@@ -6,4 +6,4 @@
   (which-key-setup-minibuffer)
   (which-key-mode))
 
-(provide 'kyr)
+(provide '30-whichkey)

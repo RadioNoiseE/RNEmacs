@@ -8,4 +8,4 @@
         company-minimum-prefix-length 2)
   :hook (after-init . global-company-mode))
 
-(provide 'acl)
+(provide '40-autocomp)

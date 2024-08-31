@@ -91,4 +91,4 @@
   (interactive)
   (insert-char ?\u200B))
 
-(provide 'cjk)
+(provide '70-cjk)

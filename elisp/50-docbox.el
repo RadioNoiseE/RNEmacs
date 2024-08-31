@@ -5,4 +5,4 @@
   :hook ((eglot-managed-mode . eldoc-box-hover-at-point-mode)
 	 (eldoc-mode . eldoc-box-hover-at-point-mode)))
 
-(provide 'dcu)
+(provide '50-docbox)

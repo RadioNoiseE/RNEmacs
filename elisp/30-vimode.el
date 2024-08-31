@@ -1,7 +1,7 @@
-;; vim like experience
+;; vi like experience
 
 (use-package evil
   :ensure t
   :config (evil-mode 1))
 
-(provide 'viy)
+(provide '30-vimode)

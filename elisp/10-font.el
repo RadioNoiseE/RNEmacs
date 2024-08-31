@@ -2,4 +2,4 @@
 
 (set-face-attribute 'default nil :height 120)
 
-(provide 'fnt)
+(provide '10-font)

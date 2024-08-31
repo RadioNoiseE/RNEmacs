@@ -41,4 +41,4 @@
 			 "] "
 			 mode-line-end-spaces)))))
 
-(provide 'mdl)
+(provide '10-modeline)

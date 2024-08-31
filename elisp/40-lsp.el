@@ -18,4 +18,4 @@
 							      (c-mode . ("clangd" "--header-insertion=never"))))
                                          (add-to-list 'eglot-server-programs mode-server))))
 
-(provide 'lsp)
+(provide '40-lsp)

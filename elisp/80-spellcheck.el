@@ -4,4 +4,4 @@
   :ensure t
   :defer t)
 
-(provide 'spc)
+(provide '80-spellcheck)

@@ -6,4 +6,4 @@
               spacemacs-theme-comment-italic t)
   :hook (after-init . (lambda () (load-theme 'spacemacs-light t))))
 
-(provide 'thm)
+(provide '10-theme)
