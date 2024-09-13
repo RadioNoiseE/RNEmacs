@@ -4,9 +4,9 @@
 (delete-selection-mode t)
 (electric-pair-mode t)
 
-(when (display-graphic-p) (toggle-scroll-bar -1)
-                          (tool-bar-mode -1)
-			  (pixel-scroll-precision-mode 1))
+(when (display-graphic-p) (scroll-bar-mode -1)
+      (tool-bar-mode -1)
+      (pixel-scroll-precision-mode 1))
 
 (setq inhibit-startup-message t)
 (setq display-line-numbers-type 'relative)
@@ -16,7 +16,9 @@
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 
-(setenv "PATH" (concat (getenv "PATH") ":/usr/local/texlive/2024/bin/x86_64-linux"))
-(add-to-list 'exec-path "/usr/local/texlive/2024/bin/x86_64-linux")
+(defun opam-env ()
+  (interactive nil)
+  (dolist (var (car (read-from-string (shell-command-to-string "opam config env --sexp"))))
+    (setenv (car var) (cadr var))))
 
 (provide '10-preferences)

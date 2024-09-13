@@ -1,35 +1,9 @@
 ;; cjk enhancements
 
-(use-package fcitx
-  :ensure t
-  :init (setq fcitx-use-dbus nil
-              fcitx-remote-command "fcitx5-remote")
-  :config (fcitx-aggressive-setup))
-
 (use-package valign
   :ensure t
   :defer t
   :hook (org-mode . valign-mode))
-
-(with-eval-after-load 'ox-latex (dolist (cjk-classes '(("smpl"
-							"\\makeatletter\\def\\ltj@stdmcfont{NotoSerifCJKSC}\\def\\ltj@stdgtfont{NotoSansCJKSC}\\def\\ltj@stdtatejfm{eva/{smpl,vert,nstd}}\\def\ltj@stdyokojfm{eva/{smpl,nstd}}\\makeatother\\documentclass{ltjsreport}"
-							("\\chapter{%s}" . "\\chapter*{%s}")
-							("\\section{%s}" . "\\section*{%s}")
-							("\\subsection{%s}" . "\\subsection*{%s}")
-							("\\subsubsection{%s}" . "\\subsubsection*{%s}"))
-						       ("trad"
-							"\\makeatletter\\def\\ltj@stdmcfont{NotoSerifCJKTC}\\def\\ltj@stdgtfont{NotoSansCJKTC}\\def\\ltj@stdtatejfm{eva/{trad,vert,nstd}}\\def\ltj@stdyokojfm{eva/{trad,nstd}}\\makeatother\\documentclass{ltjsreport}"
-							("\\chapter{%s}" . "\\chapter*{%s}")
-							("\\section{%s}" . "\\section*{%s}")
-							("\\subsection{%s}" . "\\subsection*{%s}")
-							("\\subsubsection{%s}" . "\\subsubsection*{%s}"))
-						       ("jajp"
-							"\\makeatletter\\def\\ltj@stdmcfont{NotoSerifCJK}\\def\\ltj@stdgtfont{NotoSansCJK}\\def\\ltj@stdtatejfm{eva/{ja,vert,nstd}}\\def\ltj@stdyokojfm{eva/{ja,nstd}}\\makeatother\\documentclass{ltjsreport}"
-							("\\chapter{%s}" . "\\chapter*{%s}")
-							("\\section{%s}" . "\\section*{%s}")
-							("\\subsection{%s}" . "\\subsection*{%s}")
-							("\\subsubsection{%s}" . "\\subsubsection*{%s}"))))
-				  (add-to-list 'org-latex-classes cjk-classes)))
 
 (setq org-emphasis-regexp-components
       (list (concat " \t('\"{" "[:nonascii:]")
@@ -86,6 +60,17 @@
          "\\(?:" (org-create-multibrace-regexp "(" ")" org-match-sexp-depth) "\\)"
          "\\|"
          "\\(?:\\*\\|[+-]?[[:alnum:].,\\]*[[:alnum:]]\\)\\)")))
+
+(defadvice org-html-paragraph (before org-html-paragraph-advice
+                                      (paragraph contents info) activate)
+  (let* ((origin-contents (ad-get-arg 1))
+         (fix-regexp "[[:multibyte:]]")
+         (fixed-contents
+          (replace-regexp-in-string
+           (concat
+            "\\(" fix-regexp "\\) *\n *\\(" fix-regexp "\\)") "\\1\\2" origin-contents)))
+    (ad-set-arg 1 fixed-contents)))
+
 
 (defun zero-width-space ()
   (interactive)

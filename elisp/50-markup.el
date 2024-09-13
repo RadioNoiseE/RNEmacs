@@ -38,8 +38,8 @@
 					  "\\)")
 				 1 'font-lock-variable-name-face))))))
 
-(setq TeX-view-program-selection '((output-pdf "PDF Tools"))
-      TeX-view-program-list '(("PDF Tools" TeX-pdf-tools-sync-view)))
+(setq TeX-view-program-selection '((output-pdf "Preview"))
+      TeX-view-program-list '(("Preview" "open -a Preview.app %o")))
 
 (use-package markdown-mode
   :ensure t

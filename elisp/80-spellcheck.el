@@ -1,7 +1,9 @@
 ;; spell checking
 
-(use-package flycheck
+(use-package flyspell
   :ensure t
-  :defer t)
+  :defer t
+  :hook (text-mode . (lambda ()
+		       (flyspell-mode 1))))
 
 (provide '80-spellcheck)

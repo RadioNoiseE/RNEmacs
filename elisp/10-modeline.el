@@ -2,8 +2,8 @@
 
 (setq mode-line-position
       (list
-       "  (" (propertize "%l" 'face 'font-lock-type-face)
-       "," (propertize "%c" 'face 'font-lock-type-face) ")   "))
+       " (" (propertize "%l" 'face 'font-lock-type-face)
+       "," (propertize "%c" 'face 'font-lock-type-face) ") "))
 
 (defun mode-line-fill (reserve)
   (when
@@ -28,17 +28,11 @@
 	       '(:eval (propertize "%@" 'face 'font-lock-constant-face))
 	       '(:eval (propertize "%t%Z" 'face 'font-lock-string-face))
 	       '(:eval (propertize "%*%+" 'face 'font-lock-warning-face))
-	       '(:eval (propertize "  %F" 'face 'font-lock-keyword-face))
-	       '(:eval (propertize "  %b" 'face 'font-lock-escape-face))
+	       '(:eval (propertize " %F" 'face 'font-lock-keyword-face))
 	       mode-line-position
                '(:eval (mode-line-flush-right
 			(list
 			 mode-line-modes
-			 " ["
-			 (propertize (truncate-mode-line-construct "%p" 3) 'face 'font-lock-comment-face)
-			 (propertize ":" 'face 'font-lock-warning-face)
-			 (propertize "%I" 'face 'font-lock-string-face)
-			 "] "
 			 mode-line-end-spaces)))))
 
 (provide '10-modeline)
