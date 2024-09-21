@@ -16,9 +16,4 @@
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 
-(defun opam-env ()
-  (interactive nil)
-  (dolist (var (car (read-from-string (shell-command-to-string "opam config env --sexp"))))
-    (setenv (car var) (cadr var))))
-
 (provide '10-preferences)

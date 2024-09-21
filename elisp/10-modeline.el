@@ -10,7 +10,7 @@
       (and window-system (eq 'right (get-scroll-bar-mode)))
     (setq reserve (- reserve 3)))
   (propertize " " 'display
-	      `((space :align-to (- (+ right right-fringe right-margin) ,reserve)))))
+              `((space :align-to (- (+ right right-fringe right-margin) ,reserve)))))
 
 (defun mode-line-flush-right (right-line)
   (let ((right-length (length (format-mode-line right-line))))
@@ -22,17 +22,17 @@
     (replace-regexp-in-string "%" "%%" truncated-string)))
 
 (setq-default mode-line-format
-	      (list
-	       '(:eval (propertize "%e" 'face 'font-lock-type-face))
-	       mode-line-front-space
-	       '(:eval (propertize "%@" 'face 'font-lock-constant-face))
-	       '(:eval (propertize "%t%Z" 'face 'font-lock-string-face))
-	       '(:eval (propertize "%*%+" 'face 'font-lock-warning-face))
-	       '(:eval (propertize " %F" 'face 'font-lock-keyword-face))
-	       mode-line-position
+              (list
+               '(:eval (propertize "%e" 'face 'font-lock-type-face))
+               mode-line-front-space
+               '(:eval (propertize "%@" 'face 'font-lock-constant-face))
+               '(:eval (propertize "%t%Z" 'face 'font-lock-string-face))
+               '(:eval (propertize "%*%+" 'face 'font-lock-warning-face))
+               '(:eval (propertize " %F" 'face 'font-lock-keyword-face))
+               mode-line-position
                '(:eval (mode-line-flush-right
-			(list
-			 mode-line-modes
-			 mode-line-end-spaces)))))
+                        (list
+                         "[" mode-name "]"
+                         (propertize " Mach-O " 'face 'font-lock-escape-face))))))
 
 (provide '10-modeline)

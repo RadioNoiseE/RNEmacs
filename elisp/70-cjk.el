@@ -76,4 +76,10 @@
   (interactive)
   (insert-char ?\u200B))
 
+(defun back-slash-jis ()
+  (interactive)
+  (insert-char ?\u005C))
+
+(global-set-key (kbd "M-¥") 'back-slash-jis)
+
 (provide '70-cjk)
