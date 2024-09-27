@@ -1,4 +1,4 @@
-;; use-package
+;; declarative package customization
 
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)

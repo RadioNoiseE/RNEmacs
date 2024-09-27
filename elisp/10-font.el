@@ -1,4 +1,4 @@
-;; fonts misc
+;; font misc
 
 (set-face-attribute 'default nil :height 120)
 

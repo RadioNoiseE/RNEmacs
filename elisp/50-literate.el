@@ -1,4 +1,4 @@
-;; web mode
+;; literate programming
 
 (load-library "cweb-mode")
 

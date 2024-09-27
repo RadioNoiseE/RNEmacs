@@ -17,6 +17,7 @@
 (require '0-package)
 (require '10-preferences)
 (require '10-theme)
+(require '10-splash)
 (require '10-modeline)
 (require '20-minimap)
 (require '20-treesitter)
@@ -33,7 +34,6 @@
 (require '60-git)
 (require '70-cjk)
 (require '80-spellcheck)
-(require '90-mail)
 
 (provide 'init)
 

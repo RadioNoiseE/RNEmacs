@@ -1,12 +1,12 @@
-;; preferences
+;; better defaults
 
 (global-auto-revert-mode t)
 (delete-selection-mode t)
 (electric-pair-mode t)
 
-(when (display-graphic-p) (scroll-bar-mode -1)
-      (tool-bar-mode -1)
-      (pixel-scroll-precision-mode 1))
+(scroll-bar-mode -1)
+(tool-bar-mode -1)
+(pixel-scroll-precision-mode 1)
 
 (setq inhibit-startup-message t)
 (setq display-line-numbers-type 'relative)

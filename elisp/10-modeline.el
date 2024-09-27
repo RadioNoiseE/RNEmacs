@@ -1,4 +1,4 @@
-;; modeline
+;; modeline setup
 
 (setq mode-line-position
       (list

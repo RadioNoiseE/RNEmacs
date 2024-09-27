@@ -1,11 +1,8 @@
-;; auto-complete via company-mode
+;; text completion framework
 
 (use-package company
-  :ensure t
-  :defer t
-  :init
-  (setq company-idle-delay 0.2
-        company-minimum-prefix-length 2)
+  :init (setq company-idle-delay 0.2
+              company-minimum-prefix-length 2)
   :hook (after-init . global-company-mode))
 
 (provide '40-autocomp)

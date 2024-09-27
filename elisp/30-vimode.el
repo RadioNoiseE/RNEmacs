@@ -1,7 +1,6 @@
-;; vi like experience
+;; vi editing mode
 
 (use-package evil
-  :ensure t
   :config (evil-mode 1))
 
 (provide '30-vimode)

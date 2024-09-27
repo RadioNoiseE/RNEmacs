@@ -1,10 +1,9 @@
 ;; eldoc in a child frame
 
 (use-package eldoc-box
-  :ensure t
-  :hook ((eglot-managed-mode . eldoc-box-hover-at-point-mode)
-	 (eldoc-mode . eldoc-box-hover-at-point-mode))
-  :config (setq eldoc-box-max-pixel-width 320
-                eldoc-box-max-pixel-height 100))
+  :hook ((eglot-managed-mode . eldoc-box-hover-mode)
+	 (eldoc-mode . eldoc-box-hover-mode))
+  :config (setq eldoc-box-max-pixel-width 300
+                eldoc-box-max-pixel-height 110))
 
 (provide '50-docbox)

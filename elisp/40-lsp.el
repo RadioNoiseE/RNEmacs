@@ -1,8 +1,6 @@
-;; lsp intergration
+;; language server intergration
 
 (use-package eglot
-  :ensure t
-  :defer t
   :hook ((c-mode . eglot-ensure)
 	 (c++-mode . eglot-ensure)
 	 (LaTeX-mode . eglot-ensure)

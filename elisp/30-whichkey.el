@@ -1,7 +1,6 @@
-;; which-key functionality
+;; key bindings display
 
 (use-package which-key
-  :ensure t
   :config
   (which-key-setup-minibuffer)
   (which-key-mode))

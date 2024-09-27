@@ -1,10 +1,5 @@
 ;; cjk enhancements
 
-(use-package valign
-  :ensure t
-  :defer t
-  :hook (org-mode . valign-mode))
-
 (setq org-emphasis-regexp-components
       (list (concat " \t('\"{" "[:nonascii:]")
             (concat "- \t.,:!?;'\")}\\[" "[:nonascii:]")
@@ -80,6 +75,7 @@
   (interactive)
   (insert-char ?\u005C))
 
+(global-set-key (kbd "M-SPC") 'zero-width-space)
 (global-set-key (kbd "M-¥") 'back-slash-jis)
 
 (provide '70-cjk)

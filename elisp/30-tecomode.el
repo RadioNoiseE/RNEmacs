@@ -1,4 +1,4 @@
-;; teco mode
+;; teco editing mode
 
 (autoload 'teco-mode "teco-mode" nil t)
 

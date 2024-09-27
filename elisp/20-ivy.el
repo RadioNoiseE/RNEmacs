@@ -1,7 +1,6 @@
-;; list-selection with ivy
+;; list selection enhancement
 
 (use-package ivy
-  :ensure t
   :init (setq ivy-use-virtual-buffers t
 	      ivy-count-format "(%d/%d) ")
   :config (ivy-mode 1))

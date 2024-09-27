@@ -1,7 +1,6 @@
-;; file minimap
+;; code minimap
 
 (use-package minimap
-  :ensure t
   :defer t
   :init
   (setq minimap-width-fraction 0.15
