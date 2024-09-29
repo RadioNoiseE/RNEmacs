@@ -5,7 +5,7 @@
 
 (mapc (lambda (dir)
         (add-to-list 'load-path (expand-file-name dir user-emacs-directory)))
-      '("elisp" "core"))
+      '("lisp" "core"))
 
 (let ((normal-gc-cons-threshold (* 20 1024 1024))
       (init-gc-cons-threshold (* 128 1024 1024)))
@@ -24,7 +24,6 @@
 (require '20-treesitter)
 (require '20-ivy)
 (require '30-vimode)
-(require '30-tecomode)
 (require '30-whichkey)
 (require '40-lsp)
 (require '40-autocomp)
