@@ -1,8 +1,9 @@
 ;; tree-sitter intergration
 
 (use-package tree-sitter
-  :hook (tree-sitter-after-on . tree-sitter-hl-mode)
-  :init (global-tree-sitter-mode))
+  :config
+  (global-tree-sitter-mode)
+  (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode))
 
 (use-package tree-sitter-langs
   :after tree-sitter)

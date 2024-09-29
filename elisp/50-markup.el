@@ -17,19 +17,25 @@
                       "str" "tl" "bool" "box" "coffin" "flag" "fparray"
                       "intarray" "ior" "iow" "prop" "regex")))
       (font-lock-add-keywords nil
-			      `((,(concat "\\(\\\\\\(?:@@_\\|\\(?:__\\)?[a-zA-Z]+_\\)[a-zA-Z_]+\\)"
-					  "\\(:[" signatures "]*\\)")
-				 . ((1 'font-lock-keyword-face)
-				    (2 'font-lock-type-face)))
-				(,(concat "\\(\\\\[lgc]_[a-zA-Z@_]+"
-					  "_\\(?:" (mapconcat #'identity vartypes "\\|") "\\)\\_>"
-					  "\\)")
-				 1 'font-lock-variable-name-face))))))
+                              `((,(concat "\\(\\\\\\(?:@@_\\|\\(?:__\\)?[a-zA-Z]+_\\)[a-zA-Z_]+\\)"
+                                          "\\(:[" signatures "]*\\)")
+                                 . ((1 'font-lock-keyword-face)
+                                    (2 'font-lock-type-face)))
+                                (,(concat "\\(\\\\[lgc]_[a-zA-Z@_]+"
+                                          "_\\(?:" (mapconcat #'identity vartypes "\\|") "\\)\\_>"
+                                          "\\)")
+                                 1 'font-lock-variable-name-face))))))
+
+(setq org-preview-latex-default-process 'dvisvgm
+      org-format-latex-options '(:scale 1.14))
 
 (setq TeX-view-program-selection '((output-pdf "Preview"))
       TeX-view-program-list '(("Preview" "open -a Preview.app %o")))
 
 (use-package markdown-mode
   :defer t)
+
+(setq word-wrap-by-category t)
+(add-hook 'text-mode-hook #'visual-line-mode)
 
 (provide '50-markup)
