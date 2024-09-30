@@ -1,8 +1,17 @@
-;; text completion framework
+;; buffer completion framework
 
-(use-package company
-  :init (setq company-idle-delay 0.2
-              company-minimum-prefix-length 2)
-  :hook (after-init . global-company-mode))
+(use-package corfu
+  :hook (after-init . global-corfu-mode)
+  :init (setq corfu-auto t
+              corfu-cycle t
+              corfu-quit-no-match 'separator
+              corfu-preselect 'directory)
+  :config (add-hook 'eshell-mode (lambda ()
+                                   (setq-local corfu-auto nil)))
+  :bind (:map corfu-map
+              ([tab] . corfu-next)
+              ([backtab] . corfu-previous)
+              ([return] . corfu-send)
+              ([escape] . corfu-quit)))
 
 (provide '40-autocomp)
