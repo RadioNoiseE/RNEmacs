@@ -22,7 +22,6 @@
 (require '10-modeline)
 (require '20-minimap)
 (require '20-treesitter)
-(require '20-ivy)
 (require '30-vimode)
 (require '30-whichkey)
 (require '40-lsp)
