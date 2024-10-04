@@ -35,7 +35,4 @@
 (use-package markdown-mode
   :defer t)
 
-(setq word-wrap-by-category t)
-(add-hook 'text-mode-hook #'visual-line-mode)
-
 (provide '50-markup)

@@ -6,6 +6,4 @@
                          ("nongnu" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/nongnu/")
                          ("melpa" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
 
-(package-initialize)
-
 (provide '0-melpa)
