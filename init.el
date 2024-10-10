@@ -20,6 +20,7 @@
 (require '30-whichkey)
 (require '40-lsp)
 (require '40-autocomp)
+(require '40-syntax)
 (require '40-progenv)
 (require '50-docbox)
 (require '50-markup)

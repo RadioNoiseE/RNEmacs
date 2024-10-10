@@ -4,6 +4,7 @@
 (delete-selection-mode t)
 (electric-pair-mode t)
 (pixel-scroll-precision-mode t)
+
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 
@@ -14,6 +15,7 @@
 (setq inhibit-startup-message t)
 (setq enable-recursive-minibuffers t)
 (setq word-wrap-by-category t)
+
 (setq display-line-numbers-type 'relative)
 
 (setq backup-directory-alist

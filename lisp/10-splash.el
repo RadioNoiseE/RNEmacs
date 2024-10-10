@@ -1,8 +1,8 @@
 ;; splash screen
 
 (use-package dashboard
-  :hook (after-init .(lambda () (unless (buffer-file-name)
-                                  (dashboard-setup-startup-hook))))
+  :hook (after-init . (lambda () (unless (buffer-file-name)
+                                   (dashboard-setup-startup-hook))))
   :config (setq dashboard-hide-cursor t
                 dashboard-buffer-name "*splash*"
                 dashboard-startupify-list '(dashboard-insert-banner
