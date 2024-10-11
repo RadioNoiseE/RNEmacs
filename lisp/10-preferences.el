@@ -16,8 +16,6 @@
 (setq enable-recursive-minibuffers t)
 (setq word-wrap-by-category t)
 
-(setq display-line-numbers-type 'relative)
-
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
