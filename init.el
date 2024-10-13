@@ -16,7 +16,6 @@
 (require '10-modeline)
 (require '20-minimap)
 (require '20-treesitter)
-(require '30-vimode)
 (require '30-whichkey)
 (require '40-lsp)
 (require '40-autocomp)
