@@ -12,6 +12,8 @@
 
 (setq-default indent-tabs-mode nil)
 
+(setq dired-use-ls-dired nil)
+
 (setq inhibit-startup-message t)
 (setq enable-recursive-minibuffers t)
 (setq word-wrap-by-category t)

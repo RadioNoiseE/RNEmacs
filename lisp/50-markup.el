@@ -3,6 +3,9 @@
 (use-package htmlize
   :defer t)
 
+(setq org-html-doctype "html5"
+      org-html-html5-fancy t)
+
 (use-package tex
   :ensure auctex
   :defer t
