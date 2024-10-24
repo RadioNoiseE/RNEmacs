@@ -9,6 +9,7 @@
 
 (require '0-melpa)
 (require '0-package)
+(require '0-darwin)
 (require '10-font)
 (require '10-preferences)
 (require '10-theme)
