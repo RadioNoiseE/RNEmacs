@@ -4,8 +4,8 @@
   "Load environment variables from FILE."
   (if (null (file-exists-p file))
       (signal 'file-error
-              (list "No envvar file exists." file
-                    "Run `emacs --script ~/.emacs.d/bootstrap.el`."))
+              (list "File not found" file
+                    "run `emacs --script ~/.emacs.d/bootstrap.el`."))
     (with-temp-buffer
       (insert-file-contents file)
       (when-let (env (read (current-buffer)))
@@ -24,6 +24,6 @@
               (set-time-zone-rule newtz))))
         env))))
 
-(add-hook 'after-init-hook (apply-partially #'load-env-file "~/.emacs.d/local/env.el"))
+(add-hook 'after-init-hook (apply-partially #'load-env-file "~/.emacs.d/core/darwin-env.el"))
 
 (provide '0-darwin)
